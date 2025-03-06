@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мониторинг раскачивания</title>
+    <style>
+        body { text-align: center; font-size: 28px; background: #2c3e50; color: white; margin: 0; }
+        .container { max-width: 600px; padding: 20px; background: #34495e; border-radius: 15px; }
+        .box { padding: 15px; margin: 10px; font-size: 24px; border-radius: 10px; background: #1abc9c; transition: background 0.5s; }
+        .warning { background: #e74c3c !important; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Крен (Roll)</h1>
+        <div class="box" id="rollBox">Угол: <span id="roll">0.00</span>°</div>
+        <audio id="alertSound" src="alert.mp3"></audio>
+    </div>
+
+    <script>
+        function updateData() {
+            fetch('/data')
+                .then(response => response.json())
+                .then(data => {
+                    let rollBox = document.getElementById('rollBox');
+                    let rollValue = document.getElementById('roll');
+                    let alertSound = document.getElementById('alertSound');
+
+                    rollValue.innerText = data.roll.toFixed(2);
+                    
+                    if (Math.abs(data.roll) > 20) {
+                        rollBox.classList.add('warning');
+                        alertSound.play();  // Включаем звук при критическом угле
+                    } else {
+                        rollBox.classList.remove('warning');
+                        alertSound.pause();
+                        alertSound.currentTime = 0;
+                    }
+                });
+        }
+
+        setInterval(updateData, 500);
+    </script>
+</body>
+</html>
