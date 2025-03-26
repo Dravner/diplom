@@ -125,6 +125,40 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[Document6]
+DocumentPath=PCB.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=TVCKVSMR
+
+[Document7]
+DocumentPath=PcbLib.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=EATQXGYK
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
@@ -1049,6 +1083,90 @@ SelectedOnly=0
 UpdateVariants=1
 UpdateToLatestRevision=1
 PartTypes=0
+ComponentLibIdentifierKind0=Library Name And Type
+ComponentLibraryIdentifier0=diplom.SchLib
+ComponentDesignItemID0=bat
+ComponentSymbolReference0=bat
+ComponentUpdate0=1
+ComponentIsDeviceSheet0=0
+ComponentLibIdentifierKind1=Library Name And Type
+ComponentLibraryIdentifier1=diplom.SchLib
+ComponentDesignItemID1=BJT-NPN
+ComponentSymbolReference1=BJT-NPN
+ComponentUpdate1=1
+ComponentIsDeviceSheet1=0
+ComponentLibIdentifierKind2=Library Name And Type
+ComponentLibraryIdentifier2=diplom.SchLib
+ComponentDesignItemID2=Button
+ComponentSymbolReference2=Button
+ComponentUpdate2=1
+ComponentIsDeviceSheet2=0
+ComponentLibIdentifierKind3=Library Name And Type
+ComponentLibraryIdentifier3=diplom.SchLib
+ComponentDesignItemID3=Cap
+ComponentSymbolReference3=Cap
+ComponentUpdate3=1
+ComponentIsDeviceSheet3=0
+ComponentLibIdentifierKind4=Library Name And Type
+ComponentLibraryIdentifier4=diplom.SchLib
+ComponentDesignItemID4=CP2102
+ComponentSymbolReference4=CP2102
+ComponentUpdate4=1
+ComponentIsDeviceSheet4=0
+ComponentLibIdentifierKind5=Library Name And Type
+ComponentLibraryIdentifier5=diplom.SchLib
+ComponentDesignItemID5=DC-DC 3.3V
+ComponentSymbolReference5=DC-DC 3.3V
+ComponentUpdate5=1
+ComponentIsDeviceSheet5=0
+ComponentLibIdentifierKind6=Library Name And Type
+ComponentLibraryIdentifier6=diplom.SchLib
+ComponentDesignItemID6=ESP32-WROVER-B
+ComponentSymbolReference6=ESP32-WROVER-B
+ComponentUpdate6=1
+ComponentIsDeviceSheet6=0
+ComponentLibIdentifierKind7=Library Name And Type
+ComponentLibraryIdentifier7=diplom.SchLib
+ComponentDesignItemID7=LED
+ComponentSymbolReference7=LED
+ComponentUpdate7=1
+ComponentIsDeviceSheet7=0
+ComponentLibIdentifierKind8=Library Name And Type
+ComponentLibraryIdentifier8=diplom.SchLib
+ComponentDesignItemID8=Micro USB
+ComponentSymbolReference8=Micro USB
+ComponentUpdate8=1
+ComponentIsDeviceSheet8=0
+ComponentLibIdentifierKind9=Library Name And Type
+ComponentLibraryIdentifier9=diplom.SchLib
+ComponentDesignItemID9=MPU-6050
+ComponentSymbolReference9=MPU-6050
+ComponentUpdate9=1
+ComponentIsDeviceSheet9=0
+ComponentLibIdentifierKind10=Library Name And Type
+ComponentLibraryIdentifier10=diplom.SchLib
+ComponentDesignItemID10=res
+ComponentSymbolReference10=res
+ComponentUpdate10=1
+ComponentIsDeviceSheet10=0
+ComponentLibIdentifierKind11=Library Name And Type
+ComponentLibraryIdentifier11=diplom.SchLib
+ComponentDesignItemID11=Stab
+ComponentSymbolReference11=Stab
+ComponentUpdate11=1
+ComponentIsDeviceSheet11=0
+ComponentLibIdentifierKind12=Library Name And Type
+ComponentLibraryIdentifier12=diplom.SchLib
+ComponentDesignItemID12=Suppressor-Bi
+ComponentSymbolReference12=Suppressor-Bi
+ComponentUpdate12=1
+ComponentIsDeviceSheet12=0
+ComponentLibIdentifierKind13=Library Name And Type
+ComponentLibraryIdentifier13=diplom.SchLib
+ComponentDesignItemID13=SW-01x-01p
+ComponentSymbolReference13=SW-01x-01p
+ComponentUpdate13=1
+ComponentIsDeviceSheet13=0
 FullReplace=1
 UpdateDesignatorLock=1
 UpdatePartIDLock=1
@@ -1062,6 +1180,30 @@ RemoveParameters=0
 AddModels=1
 RemoveModels=1
 UpdateCurrentModels=1
+ParameterName0=Comment
+ParameterUpdate0=1
+ParameterName1=Component Kind
+ParameterUpdate1=1
+ParameterName2=Description
+ParameterUpdate2=1
+ParameterName3=Library Reference
+ParameterUpdate3=1
+ParameterName4=Published
+ParameterUpdate4=1
+ParameterName5=Publisher
+ParameterUpdate5=1
+ParameterName6=RegType
+ParameterUpdate6=1
+ParameterName7=Type
+ParameterUpdate7=1
+ModelTypeGroup0=SI
+ModelTypeUpdate0=1
+ModelType0=SI
+ModelName0=Cap
+ModelUpdate0=1
+ModelType1=SI
+ModelName1=Res
+ModelUpdate1=1
 
 [DatabaseUpdateOptions]
 SelectedOnly=0
@@ -1070,10 +1212,40 @@ UpdateToLatestRevision=1
 PartTypes=0
 
 [NetInfos]
-Net1=NetName=EXT_5V|NetColor=clBlack
-Net2=NetName=GND|NetColor=clBlack
-Net3=NetName=VBUS|NetColor=clBlack
-Net4=NetName=VDD33|NetColor=clBlack
+Net1=NetName=+3.3В|NetColor=clBlack
+Net2=NetName=+5В|NetColor=clBlack
+Net3=NetName=EXT_5V|NetColor=clBlack
+Net4=NetName=GND|NetColor=clBlack
+Net5=NetName=NetC1_1|NetColor=clBlack
+Net6=NetName=NetC11_1|NetColor=clBlack
+Net7=NetName=NetC13_1|NetColor=clBlack
+Net8=NetName=NetC2_2|NetColor=clBlack
+Net9=NetName=NetC8_1|NetColor=clBlack
+Net10=NetName=NetC9_1|NetColor=clBlack
+Net11=NetName=NetDD1_33|NetColor=clBlack
+Net12=NetName=NetDD1_34|NetColor=clBlack
+Net13=NetName=NetDD1_35|NetColor=clBlack
+Net14=NetName=NetDD1_36|NetColor=clBlack
+Net15=NetName=NetDD2_23|NetColor=clBlack
+Net16=NetName=NetDD2_24|NetColor=clBlack
+Net17=NetName=NetDD2_9|NetColor=clBlack
+Net18=NetName=NetDD3_11|NetColor=clBlack
+Net19=NetName=NetDD3_23|NetColor=clBlack
+Net20=NetName=NetDD3_24|NetColor=clBlack
+Net21=NetName=NetDD3_25|NetColor=clBlack
+Net22=NetName=NetDD3_26|NetColor=clBlack
+Net23=NetName=NetDD3_28|NetColor=clBlack
+Net24=NetName=NetDD3_4|NetColor=clBlack
+Net25=NetName=NetDD3_5|NetColor=clBlack
+Net26=NetName=NetDD3_8|NetColor=clBlack
+Net27=NetName=NetDD3_9|NetColor=clBlack
+Net28=NetName=NetR2_1|NetColor=clBlack
+Net29=NetName=NetR2_2|NetColor=clBlack
+Net30=NetName=NetR3_1|NetColor=clBlack
+Net31=NetName=NetR3_2|NetColor=clBlack
+Net32=NetName=NetSA1_1|NetColor=clBlack
+Net33=NetName=VBUS|NetColor=clBlack
+Net34=NetName=VDD33|NetColor=clBlack
 
 [Comparison Options]
 ComparisonOptions0=Kind=Net|MinPercent=75|MinMatch=3|ShowMatch=0|UseName=-1|InclAllRules=0
