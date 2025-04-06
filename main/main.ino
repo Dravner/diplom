@@ -4,9 +4,9 @@
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
 
-const char* ssid = "Beeline_2G_F35528";  // Укажи свою Wi-Fi сеть
-const char* password = "SDuMDAM9";
-const char* serverUrl = "http://192.168.1.77:5000/data";  // IP ноутбука
+const char* ssid = "AP";  // Укажи свою Wi-Fi сеть
+const char* password = "88888888";
+const char* serverUrl = "http://192.168.133.122:5000/data";  // IP ноутбука
 
 WiFiClient client;
 Adafruit_MPU6050 mpu;

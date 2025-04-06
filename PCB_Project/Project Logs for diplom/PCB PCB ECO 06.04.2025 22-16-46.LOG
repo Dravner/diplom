@@ -1,0 +1,218 @@
+Added Component: Designator=C1(CAP: 0805)
+Added Component: Designator=C2(CAP: 0805)
+Added Component: Designator=C3(CAP: 0805)
+Added Component: Designator=C4(CAP: 0805)
+Added Component: Designator=C5(CAP: 0805)
+Added Component: Designator=C6(CAP: 0805)
+Added Component: Designator=C7(CAP: 0805)
+Added Component: Designator=C8(CAP: 0805)
+Added Component: Designator=C9(CAP: 0805)
+Added Component: Designator=C10(CAP: 0805)
+Added Component: Designator=C11(CAP: 0805)
+Added Component: Designator=C12(CAP: 0805)
+Added Component: Designator=C13(CAP: 0805)
+Added Component: Designator=DA1(SOT23_P)
+Add component (AddParameter): Name = "Published"; Value = "13.08.2015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Andrew Danich"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RegType"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Микросхема"; VariantName = "[No Variations]"
+Added Component: Designator=DD1(ESP32-S3-WROOM-1-N16R2 - duplicate)
+Added Component: Designator=DD2(MPU-6050)
+Added Component: Designator=DD3(CP2102)
+Added Component: Designator=R1(RES: 0805)
+Added Component: Designator=R2(RES: 0805)
+Added Component: Designator=R3(RES: 0805)
+Added Component: Designator=R4(RES: 0805)
+Added Component: Designator=R5(RES: 0805)
+Added Component: Designator=R6(RES: 0805)
+Added Component: Designator=R7(RES: 0805)
+Added Component: Designator=R8(RES: 0805)
+Added Component: Designator=R9(RES: 0805)
+Added Component: Designator=R10(RES: 0805)
+Added Component: Designator=R11(RES: 0805)
+Added Component: Designator=R12(RES: 0805)
+Added Component: Designator=SA1(Switch)
+Add component (AddParameter): Name = "Published"; Value = "11.04.2014"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Andrew Danich"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Переключатель"; VariantName = "[No Variations]"
+Added Component: Designator=SW1(Button)
+Added Component: Designator=SW2(Button)
+Added Component: Designator=VD4(LED: 0805)
+Added Component: Designator=VT1(SOT23_P)
+Add component (AddParameter): Name = "Published"; Value = "07.05.2013"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Andrew Danich"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Транзистор"; VariantName = "[No Variations]"
+Added Component: Designator=VT2(SOT23_P)
+Add component (AddParameter): Name = "Published"; Value = "07.05.2013"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Andrew Danich"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Транзистор"; VariantName = "[No Variations]"
+Added Component: Designator=XS1(1850 holder)
+Added Component: Designator=XS2(MicroUSB)
+Added Pin To Net: NetName=+3.3В Pin=C4-1
+Added Pin To Net: NetName=+3.3В Pin=C5-1
+Added Pin To Net: NetName=+3.3В Pin=C7-1
+Added Pin To Net: NetName=+3.3В Pin=C10-1
+Added Pin To Net: NetName=+3.3В Pin=C12-1
+Added Pin To Net: NetName=+3.3В Pin=DA1-3
+Added Pin To Net: NetName=+3.3В Pin=DD1-2
+Added Pin To Net: NetName=+3.3В Pin=DD3-6
+Added Pin To Net: NetName=+3.3В Pin=DD3-7
+Added Pin To Net: NetName=+3.3В Pin=R4-1
+Added Pin To Net: NetName=+3.3В Pin=R5-1
+Added Pin To Net: NetName=+3.3В Pin=R6-1
+Added Pin To Net: NetName=+3.3В Pin=R7-1
+Added Pin To Net: NetName=+3.3В Pin=R9-2
+Added Net: Name=+3.3В
+Added Pin To Net: NetName=+5В Pin=C3-1
+Added Pin To Net: NetName=+5В Pin=DA1-1
+Added Pin To Net: NetName=+5В Pin=R1-1
+Added Pin To Net: NetName=+5В Pin=SA1-2
+Added Net: Name=+5В
+Added Pin To Net: NetName=DTR Pin=DD3-28
+Added Pin To Net: NetName=DTR Pin=R2-1
+Added Pin To Net: NetName=DTR Pin=VT2-3
+Added Net: Name=DTR
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=GND Pin=C8-2
+Added Pin To Net: NetName=GND Pin=C9-2
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=GND Pin=C13-2
+Added Pin To Net: NetName=GND Pin=DA1-2
+Added Pin To Net: NetName=GND Pin=DD1-1
+Added Pin To Net: NetName=GND Pin=DD1-38
+Added Pin To Net: NetName=GND Pin=DD1-39
+Added Pin To Net: NetName=GND Pin=DD2-1
+Added Pin To Net: NetName=GND Pin=DD2-11
+Added Pin To Net: NetName=GND Pin=DD2-18
+Added Pin To Net: NetName=GND Pin=DD3-3
+Added Pin To Net: NetName=GND Pin=DD3-29
+Added Pin To Net: NetName=GND Pin=R8-2
+Added Pin To Net: NetName=GND Pin=R10-2
+Added Pin To Net: NetName=GND Pin=R12-2
+Added Pin To Net: NetName=GND Pin=SW1-2
+Added Pin To Net: NetName=GND Pin=SW1-2
+Added Pin To Net: NetName=GND Pin=SW2-1
+Added Pin To Net: NetName=GND Pin=SW2-1
+Added Pin To Net: NetName=GND Pin=VD4-2
+Added Net: Name=GND
+Added Pin To Net: NetName=I2C_SCL Pin=DD1-36
+Added Pin To Net: NetName=I2C_SCL Pin=DD2-23
+Added Pin To Net: NetName=I2C_SCL Pin=R5-2
+Added Net: Name=I2C_SCL
+Added Pin To Net: NetName=I2C_SDA Pin=DD1-33
+Added Pin To Net: NetName=I2C_SDA Pin=DD2-24
+Added Pin To Net: NetName=I2C_SDA Pin=R6-2
+Added Net: Name=I2C_SDA
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=NetC1_1 Pin=DD1-25
+Added Pin To Net: NetName=NetC1_1 Pin=SW1-1
+Added Pin To Net: NetName=NetC1_1 Pin=SW1-1
+Added Pin To Net: NetName=NetC1_1 Pin=VT2-2
+Added Net: Name=NetC1_1
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=NetC2_2 Pin=C6-1
+Added Pin To Net: NetName=NetC2_2 Pin=DD1-3
+Added Pin To Net: NetName=NetC2_2 Pin=R4-2
+Added Pin To Net: NetName=NetC2_2 Pin=SW2-2
+Added Pin To Net: NetName=NetC2_2 Pin=SW2-2
+Added Pin To Net: NetName=NetC2_2 Pin=VT1-2
+Added Net: Name=NetC2_2
+Added Pin To Net: NetName=NetC8_1 Pin=C8-1
+Added Pin To Net: NetName=NetC8_1 Pin=DD2-20
+Added Net: Name=NetC8_1
+Added Pin To Net: NetName=NetC9_1 Pin=C9-1
+Added Pin To Net: NetName=NetC9_1 Pin=DD2-13
+Added Pin To Net: NetName=NetC9_1 Pin=R7-2
+Added Net: Name=NetC9_1
+Added Pin To Net: NetName=NetC11_1 Pin=C11-1
+Added Pin To Net: NetName=NetC11_1 Pin=DD2-10
+Added Net: Name=NetC11_1
+Added Pin To Net: NetName=NetC13_1 Pin=C13-1
+Added Pin To Net: NetName=NetC13_1 Pin=DD2-8
+Added Net: Name=NetC13_1
+Added Pin To Net: NetName=NetDD2_9 Pin=DD2-9
+Added Pin To Net: NetName=NetDD2_9 Pin=R12-1
+Added Net: Name=NetDD2_9
+Added Pin To Net: NetName=NetDD3_4 Pin=DD3-4
+Added Net: Name=NetDD3_4
+Added Pin To Net: NetName=NetDD3_5 Pin=DD3-5
+Added Net: Name=NetDD3_5
+Added Pin To Net: NetName=NetDD3_8 Pin=DD3-8
+Added Pin To Net: NetName=NetDD3_8 Pin=R10-1
+Added Pin To Net: NetName=NetDD3_8 Pin=R11-1
+Added Net: Name=NetDD3_8
+Added Pin To Net: NetName=NetDD3_9 Pin=DD3-9
+Added Pin To Net: NetName=NetDD3_9 Pin=R9-1
+Added Net: Name=NetDD3_9
+Added Pin To Net: NetName=NetDD3_11 Pin=DD3-11
+Added Pin To Net: NetName=NetDD3_11 Pin=R8-1
+Added Net: Name=NetDD3_11
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR1_2 Pin=VD4-1
+Added Net: Name=NetR1_2
+Added Pin To Net: NetName=NetR2_2 Pin=R2-2
+Added Pin To Net: NetName=NetR2_2 Pin=VT1-1
+Added Net: Name=NetR2_2
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=VT2-1
+Added Net: Name=NetR3_2
+Added Pin To Net: NetName=NetSA1_1 Pin=SA1-1
+Added Net: Name=NetSA1_1
+Added Pin To Net: NetName=RTS Pin=DD3-24
+Added Pin To Net: NetName=RTS Pin=R3-1
+Added Pin To Net: NetName=RTS Pin=VT1-3
+Added Net: Name=RTS
+Added Pin To Net: NetName=RXD0 Pin=DD1-34
+Added Pin To Net: NetName=RXD0 Pin=DD3-25
+Added Net: Name=RXD0
+Added Pin To Net: NetName=TXD0 Pin=DD1-35
+Added Pin To Net: NetName=TXD0 Pin=DD3-26
+Added Net: Name=TXD0
+Added Pin To Net: NetName=VBUS Pin=R11-2
+Added Net: Name=VBUS
+Added Member To Class: ClassName=Э3_diplom Member=Component C1 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component C2 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component C3 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component C4 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component C5 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component C6 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component C7 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component C8 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component C9 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component C10 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component C11 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component C12 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component C13 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component DA1 AP2138N
+Added Member To Class: ClassName=Э3_diplom Member=Component DD1 ESP32-WROOM
+Added Member To Class: ClassName=Э3_diplom Member=Component DD2 MPU-6050
+Added Member To Class: ClassName=Э3_diplom Member=Component DD3 CP2102
+Added Member To Class: ClassName=Э3_diplom Member=Component R1 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component R2 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component R3 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component R4 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component R5 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component R6 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component R7 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component R8 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component R9 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component R10 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component R11 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component R12 =Value
+Added Member To Class: ClassName=Э3_diplom Member=Component SA1 Text
+Added Member To Class: ClassName=Э3_diplom Member=Component SW1 Button
+Added Member To Class: ClassName=Э3_diplom Member=Component SW2 Button
+Added Member To Class: ClassName=Э3_diplom Member=Component VD4
+Added Member To Class: ClassName=Э3_diplom Member=Component VT1 BJT-NPN
+Added Member To Class: ClassName=Э3_diplom Member=Component VT2 BJT-NPN
+Added Member To Class: ClassName=Э3_diplom Member=Component XS1 bat
+Added Member To Class: ClassName=Э3_diplom Member=Component XS2 USB con
+Added Room: Name=Э3_diplom
