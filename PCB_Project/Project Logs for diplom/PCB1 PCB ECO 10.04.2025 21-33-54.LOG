@@ -1,0 +1,41 @@
+Change Physical Footprint: Designator=C1 Old Footprint=CAP: 0805 New Footprint=CAP: 0805
+Change Physical Footprint: Designator=C2 Old Footprint=CAP: 0805 New Footprint=CAP: 0805
+Change Physical Footprint: Designator=C3 Old Footprint=CAP: 0805 New Footprint=CAP: 0805
+Change Physical Footprint: Designator=C4 Old Footprint=CAP: 0805 New Footprint=CAP: 0805
+Change Physical Footprint: Designator=C5 Old Footprint=CAP: 0805 New Footprint=CAP: 0805
+Change Physical Footprint: Designator=C6 Old Footprint=CAP: 0805 New Footprint=CAP: 0805
+Change Physical Footprint: Designator=C7 Old Footprint=CAP: 0805 New Footprint=CAP: 0805
+Change Physical Footprint: Designator=C8 Old Footprint=CAP: 0805 New Footprint=CAP: 0805
+Change Physical Footprint: Designator=C9 Old Footprint=CAP: 0805 New Footprint=CAP: 0805
+Change Physical Footprint: Designator=C10 Old Footprint=CAP: 0805 New Footprint=CAP: 0805
+Change Physical Footprint: Designator=C11 Old Footprint=CAP: 0805 New Footprint=CAP: 0805
+Change Physical Footprint: Designator=C12 Old Footprint=CAP: 0805 New Footprint=CAP: 0805
+Change Physical Footprint: Designator=C13 Old Footprint=CAP: 0805 New Footprint=CAP: 0805
+Change Physical Footprint: Designator=DA1 Old Footprint=SOT-23 New Footprint=SOT-23
+Change Physical Footprint: Designator=DD1 Old Footprint=ESP32-S3-WROOM-1-N16R2 - duplicate New Footprint=ESP32-S3-WROOM-1-N16R2 - duplicate
+Change Physical Footprint: Designator=DD2 Old Footprint=CP2102 New Footprint=CP2102
+Change Physical Footprint: Designator=DD3 Old Footprint=MPU-6050 New Footprint=MPU-6050
+Change Physical Footprint: Designator=R1 Old Footprint=RES: 0805 New Footprint=RES: 0805
+Change Physical Footprint: Designator=R2 Old Footprint=RES: 0805 New Footprint=RES: 0805
+Change Physical Footprint: Designator=R3 Old Footprint=RES: 0805 New Footprint=RES: 0805
+Change Physical Footprint: Designator=R4 Old Footprint=RES: 0805 New Footprint=RES: 0805
+Change Physical Footprint: Designator=R5 Old Footprint=RES: 0805 New Footprint=RES: 0805
+Change Physical Footprint: Designator=R6 Old Footprint=RES: 0805 New Footprint=RES: 0805
+Change Physical Footprint: Designator=R7 Old Footprint=RES: 0805 New Footprint=RES: 0805
+Change Physical Footprint: Designator=R8 Old Footprint=RES: 0805 New Footprint=RES: 0805
+Change Physical Footprint: Designator=R9 Old Footprint=RES: 0805 New Footprint=RES: 0805
+Change Physical Footprint: Designator=R10 Old Footprint=RES: 0805 New Footprint=RES: 0805
+Change Physical Footprint: Designator=R11 Old Footprint=RES: 0805 New Footprint=RES: 0805
+Change Physical Footprint: Designator=R12 Old Footprint=RES: 0805 New Footprint=RES: 0805
+Change Physical Footprint: Designator=SW1 Old Footprint=BUT: SMD 6x6 H4.3 New Footprint=BUT: SMD 6x6 H4.3
+Change Physical Footprint: Designator=SW2 Old Footprint=BUT: MTS-102 New Footprint=BUT: MTS-102
+Change Physical Footprint: Designator=SW3 Old Footprint=BUT: SMD 6x6 H4.3 New Footprint=BUT: SMD 6x6 H4.3
+Change Physical Footprint: Designator=VD1 Old Footprint=LED: 0805 New Footprint=LED: 0805
+Change Physical Footprint: Designator=VD2 Old Footprint=DIOD-523 New Footprint=DIOD-523
+Change Physical Footprint: Designator=VD3 Old Footprint=BAT760-7 New Footprint=BAT760-7
+Change Physical Footprint: Designator=VD4 Old Footprint=DIOD-523 New Footprint=DIOD-523
+Change Physical Footprint: Designator=VD5 Old Footprint=DIOD-523 New Footprint=DIOD-523
+Change Physical Footprint: Designator=VT1 Old Footprint=SOT-23 New Footprint=SOT-23
+Change Physical Footprint: Designator=VT2 Old Footprint=SOT-23 New Footprint=SOT-23
+Change Physical Footprint: Designator=XS1 Old Footprint=1850 holder New Footprint=1850 holder
+Change Physical Footprint: Designator=XS2 Old Footprint=MicroUSB New Footprint=MicroUSB
