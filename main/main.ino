@@ -6,7 +6,7 @@
 
 const char* ssid = "AP";  // Укажи свою Wi-Fi сеть
 const char* password = "88888888";
-const char* serverUrl = "http://192.168.136.122:5000/data";  // IP ноутбука
+const char* serverUrl = "http://192.168.104.122:5000/data";  // IP ноутбука
 
 WiFiClient client;
 Adafruit_MPU6050 mpu;
