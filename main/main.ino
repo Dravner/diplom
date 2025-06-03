@@ -13,9 +13,9 @@ WebSocketsServer webSocket = WebSocketsServer(81);
 const char *ssid = "TrailerMonitor";
 const char *password = "12345678";
 
-float criticalAngle = 15.0; // критический угол
+float criticalAngle = 15.0;
+int connectedClient = -1;  // ID подключенного клиента
 
-// === Kalman-фильтр ===
 class Kalman {
 public:
   Kalman() : angle(0), bias(0), P{{1, 0}, {0, 1}} {}
@@ -116,10 +116,10 @@ void setup() {
   Wire.begin();
 
   WiFi.softAP(ssid, password);
-  Serial.println("Точка доступа запущена. IP: 192.168.4.1");
+  Serial.println("AP IP: 192.168.4.1");
 
   if (!mpu.begin()) {
-    Serial.println("Ошибка инициализации MPU6050");
+    Serial.println("Ошибка MPU6050");
     while (1);
   }
 
@@ -134,7 +134,21 @@ void setup() {
 
   server.begin();
   webSocket.begin();
-  webSocket.onEvent([](uint8_t, WStype_t type, uint8_t *payload, size_t) {});
+
+  webSocket.onEvent([](uint8_t num, WStype_t type, uint8_t *payload, size_t) {
+    switch (type) {
+      case WStype_CONNECTED:
+        connectedClient = num;
+        Serial.printf("Клиент %u подключен\n", num);
+        break;
+      case WStype_DISCONNECTED:
+        Serial.printf("Клиент %u отключился\n", num);
+        if (connectedClient == num) connectedClient = -1;
+        break;
+      default:
+        break;
+    }
+  });
 }
 
 void loop() {
@@ -151,7 +165,10 @@ void loop() {
   float accelRoll = atan2(-a.acceleration.x, a.acceleration.z) * 180.0 / PI;
   roll = kalmanRoll.update(accelRoll, g.gyro.y * 180.0 / PI, dt);
 
-  String data = String(roll, 2);
-  webSocket.broadcastTXT(data);
+  if (connectedClient >= 0) {
+    String data = String(roll, 2);
+    webSocket.sendTXT(connectedClient, data);
+  }
+
   delay(300);
 }
