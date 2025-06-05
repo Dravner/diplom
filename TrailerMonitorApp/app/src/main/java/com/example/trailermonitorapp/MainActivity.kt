@@ -37,6 +37,10 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import android.media.RingtoneManager
 import android.media.AudioAttributes
+import android.net.ConnectivityManager
+import android.net.Network
+import android.net.NetworkCapabilities
+
 
 
 // === ViewModel ===
@@ -187,13 +191,14 @@ class WebSocketService : Service() {
             }
 
             val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+            manager.deleteNotificationChannel(CHANNEL_ID) // <-- ДОБАВЬ ЭТО, чтобы сбрасывать "тихий" канал
             manager.createNotificationChannel(channel)
         }
 
         val notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("TrailerMonitor")
             .setContentText("Слежение за углом наклона активно")
-            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setSmallIcon(R.drawable.ic_start_monitoring) // ← твоя иконка
             .build()
 
         startForeground(1, notification)
@@ -221,7 +226,26 @@ class WebSocketService : Service() {
     private fun connectToWebSocket() {
         updateStatus("Подключение...")
 
-        client = OkHttpClient()
+        val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val allNetworks = connectivityManager.allNetworks
+
+// Найдём Wi-Fi сеть (которая не имеет интернета)
+        val wifiNetwork = allNetworks.find { network ->
+            val capabilities = connectivityManager.getNetworkCapabilities(network)
+            capabilities?.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) == true
+        }
+
+        if (wifiNetwork != null) {
+            Log.d("WebSocket", "Привязываем WebSocket к Wi-Fi-сети ESP32")
+
+            client = OkHttpClient.Builder()
+                .socketFactory(wifiNetwork.socketFactory)
+                .build()
+        } else {
+            Log.e("WebSocket", "Wi-Fi сеть не найдена!")
+            return
+        }
+
         val request = Request.Builder().url("ws://192.168.4.1:81/").build()
         webSocket = client.newWebSocket(request, object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: Response) {
@@ -238,7 +262,6 @@ class WebSocketService : Service() {
                         val now = System.currentTimeMillis()
                         if (now - lastAlertTime > alertCooldown) {
                             lastAlertTime = now
-                            showNotification("ОПАСНОСТЬ ЗАВАЛА!", "Угол: $roll°")
                             showDangerPushNotification()
                             if (!mediaPlayer.isPlaying) mediaPlayer.start()
                         }
@@ -257,7 +280,6 @@ class WebSocketService : Service() {
 
             override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
                 Log.e("WebSocket", "Ошибка подключения: ${t.message}")
-                showNotification("Ошибка WebSocket", t.message ?: "Неизвестная ошибка")
                 updateStatus("Ожидание повторного подключения...")
                 reconnectWithDelay()
             }
@@ -265,32 +287,39 @@ class WebSocketService : Service() {
     }
 
     private fun showDangerPushNotification() {
-        // Интент открытия главной активности
         val intent = Intent(this, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
+
         val pendingIntent = PendingIntent.getActivity(
-            this,
-            0,
-            intent,
+            this, 0, intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
+        val fullScreenIntent = PendingIntent.getActivity(
+            this, 1, intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+
+        val soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+
         val builder = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setDefaults(NotificationCompat.DEFAULT_ALL) // звук, вибрация, всплытие
-            .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setSmallIcon(R.drawable.ic_notification) // ← твоя иконка
             .setContentTitle("Опасность завала!")
             .setContentText("Угол превышает критический предел")
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setCategory(NotificationCompat.CATEGORY_ALARM)
-            .setContentIntent(pendingIntent)
+            .setDefaults(Notification.DEFAULT_ALL)
+            .setSound(soundUri) // <-- ВАЖНО: звук
+            .setVibrate(longArrayOf(0, 500, 200, 500)) // <-- ВАЖНО: вибрация
+            .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
             .setAutoCancel(true)
+            .setContentIntent(pendingIntent)
+            .setFullScreenIntent(fullScreenIntent, true)
 
         val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
         manager.notify(777, builder.build())
     }
-
 
 
     private fun reconnectWithDelay() {
@@ -306,18 +335,6 @@ class WebSocketService : Service() {
             putExtra("status", status)
         }
         sendBroadcast(intent)
-    }
-
-    private fun showNotification(title: String, message: String) {
-        val builder = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setDefaults(Notification.DEFAULT_ALL) // звук, вибрация, всплытие
-            .setSmallIcon(R.drawable.ic_launcher_foreground)
-            .setContentTitle(title)
-            .setContentText(message)
-            .setPriority(NotificationCompat.PRIORITY_HIGH)
-
-        val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
-        manager.notify(Random().nextInt(), builder.build())
     }
 
     override fun onBind(intent: Intent?): IBinder? = null
