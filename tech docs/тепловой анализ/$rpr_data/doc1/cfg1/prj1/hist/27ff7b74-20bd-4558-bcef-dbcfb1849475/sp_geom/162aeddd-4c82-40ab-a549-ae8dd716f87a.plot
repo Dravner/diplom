@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feature>
+	<version>1</version>
+	<uuid>911608f4-10ad-47fa-bc31-acfbe4fb18f4</uuid>
+	<name>Картина на поверхности 2 Геометрия</name>
+	<type>15</type>
+	<res_file_key>162aeddd-4c82-40ab-a549-ae8dd716f87a</res_file_key>
+	<cs_name/>
+	<cs_uuid/>
+	<x_form>
+		<global>true</global>
+		<origin>
+			<item>0</item>
+			<item>0</item>
+			<item>0</item>
+		</origin>
+		<translate>
+			<item>1</item>
+			<item>0</item>
+			<item>0</item>
+			<item>0</item>
+			<item>1</item>
+			<item>0</item>
+			<item>0</item>
+			<item>0</item>
+			<item>1</item>
+		</translate>
+	</x_form>
+	<display_bl>false</display_bl>
+	<interpolate>true</interpolate>
+	<use_cad_geom>true</use_cad_geom>
+	<moving_reference>true</moving_reference>
+	<moving_display>true</moving_display>
+	<full_task>false</full_task>
+	<use_in_BRP>false</use_in_BRP>
+	<use_all_faces>true</use_all_faces>
+	<geom_ref/>
+	<domain_filter>
+		<enabled>false</enabled>
+		<keep>true</keep>
+		<type>0</type>
+		<domains/>
+	</domain_filter>
+	<medias>
+		<item>2</item>
+	</medias>
+</feature>
